@@ -115,12 +115,12 @@
         const petalData = [
             // --- CAPA FONDO (Pétalos grandes de atrás) ---
             { word: "Corazon", title: "Te amo con mi corazón", text: "Gracias a ti puedo sentir lo que tanto dicen en las peliculas y canciones. Tengo mi motor, la razon por la que me despierto feliz cada día y me voy a dormir con una sonrisa y muchas tranquilidad. ma raison d'être <3. Te amo hoy, mañana y siempre." },
-            { word: "Oido",   title: "Te amo con mis Oido", text: "Que podria escucharte 24 horas del día sin parar y seguir teniendo las mismas ganas para el día siguiente. Siempre estare esperando una historia más, una anecdota más, un raje más, un chisme más. Lo que sea si viene de ti." },
+            { word: "Oido",   title: "Te amo con mis oidos", text: "Que podria escucharte 24 horas del día sin parar y seguir teniendo las mismas ganas para el día siguiente. Siempre estare esperando una historia más, una anecdota más, un raje más, un chisme más. Lo que sea si viene de ti." },
             { word: "Olfato",    title: "Te amo con mi olfato",     text: "Que como te he dicho muchas veces, adoro como hueles y podría literalmente estar oliendote todo el dia JAJKAJKJKA. Gracias por darme ese peluchito con mi droga fav(tu olor). Siempre querre estar a tu ladito y poder sentirte con solo respirar. " },
             // --- CAPA FRENTE (Pétalos del centro) ---
             { word: "Gusto",      title: "Te amo con mi gusto",      text: "El poder besarte, o por mientras besito blutut. Me hace querer cada vez más de ti. SIEMPRE. Desde ese primer beso supe que era ahi (contigo) donde queria pasar el resto de mi vida." },
             { word: "Vista",   title: "Te amo con mi vista",            text: "Con ver mis ojitos creo que te daras cuenta lo mucho que te admiro, quiero, adoro, amo y lo mucho que me gusta verte. Mis ojos simplemente ven y te desean para toda la vida. Quisiera de aqui a un futuro despertar y lo primero que vea sea a ti a mi lado" },
-            { word: "Tacto",   title: "Te amo con mi tacto",       text: "Poder tocarte, abrazarte, sentirte me llena el día. No sabia lo mucho que me gustaba abrazar hasta que te abaracé por primera vez. No sabia lo mucho que me gustaba ir de la mano con alguein hasta que te sostuve la mano esa primera vez. Y se que quiero seguir tomando tu mano por siempre" }
+            { word: "Tacto",   title: "Te amo con mi tacto",       text: "Poder tocarte, abrazarte, sentirte me llena el día. No sabia lo mucho que me gustaba abrazar hasta que te abrace por primera vez. No sabia lo mucho que me gustaba ir de la mano con alguien hasta que te sostuve la mano esa primera vez. Y se que quiero seguir tomando tu mano por y para siempre." }
         ];
 
         // ==========================================
@@ -405,6 +405,15 @@ function closePage() {
             resizeCanvas(windowWidth, windowHeight);
             maxStemHeight = height * 0.50;
         }
+		let tituloOriginal = document.title;
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                document.title = "¡No te vayas! 💔"; 
+            } else {
+                document.title = tituloOriginal;
+            }
+        });
     </script>
 </body>
 </html>
+
